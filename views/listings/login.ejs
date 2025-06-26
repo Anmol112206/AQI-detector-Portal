@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Quality Monitor</title>
+    <link rel="stylesheet" href="/css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="air-visualization"></div>
+
+    <div class="left-panel">
+      <div class="logo-container">
+        <i class="fas fa-cloud"></i>
+        <div class="logo-text">
+          <h2>Air Quality Monitoring System</h2>
+          <p>
+            Track real-time pollution levels and environmental data for
+            healthier communities worldwide. Our advanced sensors provide
+            accurate, up-to-date air quality information.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div class="login-panel">
+        <div class="login-header">
+          <h1>Welcome Back</h1>
+          <p>Sign in to access your dashboard</p>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            spellcheck="false"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="password-container">
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••"
+              spellcheck="false"
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Show password"
+            >
+              <i class="far fa-eye-slash"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="login-button" id="login-btn">
+          <span class="sign-in">Sign In</span>
+          <div class="loading-spinner" id="loadingSpinner"></div>
+        </button>
+
+        <div class="signup-link">
+          Don't have an account? <a href="/signup">Create Account</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/js/login.js"></script>
+  </body>
+</html>

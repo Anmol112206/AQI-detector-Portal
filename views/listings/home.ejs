@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirVista | Real-Time Air Quality Monitoring</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css"
+    />
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+
+  <body>
+    <nav id="navbar" class="navbar">
+      <div class="brand-container">
+        <span class="welcome-text">AirVista</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="/manage_city" class="nav-link"
+          ><i class="fas fa-bell"></i> Notifications</a
+        >
+        <a href="/resources" class="nav-link"
+          ><i class="fas fa-book"></i> Resources</a
+        >
+        <a href="/about" class="nav-link"
+          ><i class="fas fa-info-circle"></i> About Us</a
+        >
+        <button class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/manage_city" class="mobile-nav-link"
+        ><i class="fas fa-city"></i> Manage Cities</a
+      >
+      <a href="/resources" class="mobile-nav-link"
+        ><i class="fas fa-book"></i> Resources</a
+      >
+      <a href="/about" class="mobile-nav-link"
+        ><i class="fas fa-info-circle"></i> About Us</a
+      >
+      <button class="mobile-logout-btn">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/media/background.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-content">
+        <h1 class="animate__animated animate__fadeInDown"></h1>
+        <p class="animate__animated animate__fadeIn animate__delay-1s">
+          Monitor real-time air quality data for healthier living
+        </p>
+
+        <div
+          class="search-box animate__animated animate__fadeIn animate__delay-2s"
+        >
+          <form id="citySearchForm">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Enter your city name..."
+              name="city"
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button type="submit" id="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="aqi-scale">
+      <h2 class="animate__animated animate__fadeIn">
+        Understanding Air Quality
+      </h2>
+      <div class="scale-container">
+        <div
+          class="scale-item animate__animated animate__fadeInUp"
+          style="background-color: #4caf50"
+        >
+          <h3>0-50</h3>
+          <p>Safe</p>
+        </div>
+        <div
+          class="scale-item animate__animated animate__fadeInUp animate-delay-1"
+          style="background-color: #ffc107"
+        >
+          <h3>51-100</h3>
+          <p>Moderate</p>
+        </div>
+        <div
+          class="scale-item animate__animated animate__fadeInUp animate-delay-1"
+          style="background-color: #ff9800"
+        >
+          <h3>101-200</h3>
+          <p>Poor</p>
+        </div>
+        <div
+          class="scale-item animate__animated animate__fadeInUp animate-delay-2"
+          style="background-color: #f44336"
+        >
+          <h3>201-300</h3>
+          <p>Unhealthy</p>
+        </div>
+        <div
+          class="scale-item animate__animated animate__fadeInUp animate-delay-2"
+          style="background-color: #9c27b0"
+        >
+          <h3>301-400</h3>
+          <p>Severe</p>
+        </div>
+        <div
+          class="scale-item animate__animated animate__fadeInUp animate-delay-3"
+          style="background-color: #9c191a"
+        >
+          <h3>400+</h3>
+          <p>Hazardous</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features-container">
+        <div class="feature-card animate__animated animate__fadeIn">
+          <div class="feature-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3>Real-Time Monitoring</h3>
+          <p>
+            Get up-to-the-minute air quality data for any location worldwide
+            with our comprehensive monitoring network.
+          </p>
+        </div>
+
+        <div
+          class="feature-card animate__animated animate__fadeIn animate-delay-1"
+        >
+          <div class="feature-icon">
+            <i class="fas fa-cloud-sun-rain"></i>
+          </div>
+          <h3>Live Weather Metrics</h3>
+          <p>
+            View updated weather conditions to understand Real-time temperature,
+            humidity and precipitation data.
+          </p>
+        </div>
+
+        <div
+          class="feature-card animate__animated animate__fadeIn animate-delay-2"
+        >
+          <div class="feature-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h3>AQI Alerts</h3>
+          <p>
+            Smart alerts for smart breathing — get notified when the air in your cities gets harmful.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="cta d-none">
+      <h2 class="animate__animated animate__fadeInDown">
+        Ready to breathe easier?
+      </h2>
+      <p class="animate__animated animate__fadeIn animate-delay-1s">
+        Join to receive earliest notifications when air quality reaches
+        unhealthy levels
+      </p>
+      <a
+        href="/signup"
+        class="cta-btn animate__animated animate__fadeIn animate-delay-2s"
+        >Get Started Now<i class="fas fa-arrow-right"></i
+      ></a>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 AirVista | Air Quality Index Portal. All rights reserved.</p>
+        <p>
+          We gratefully acknowledge all data providers who make this work
+          possible.
+        </p>
+        <div class="footer-links">
+          <a href="/about" class="footer-link">About Us</a>
+          <a href="/resources" class="footer-link">Resources</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script type="module" src="/js/home.js"></script>
+  </body>
+</html>

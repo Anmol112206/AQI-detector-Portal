@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Quality Monitor</title>
+    <link rel="stylesheet" href="/css/signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="air-visualization"></div>
+
+    <div class="left-panel">
+      <div class="logo-container">
+        <i class="fas fa-cloud"></i>
+        <div class="logo-text">
+          <h2>Air Quality Monitoring System</h2>
+          <p>
+            Track real-time pollution levels and environmental data for
+            healthier communities worldwide providing accurate, up-to-date air
+            quality information.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div class="signup-panel">
+        <div class="signup-header">
+          <h1>Create Account</h1>
+          <p>Sign up to access your dashboard</p>
+        </div>
+
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your username"
+            spellcheck="false"
+          />
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            spellcheck="false"
+          />
+        </div>
+        <div class="location-group">
+          <div class="input-group">
+            <label for="city">City</label>
+            <input
+              type="text"
+              id="city"
+              placeholder="Your city"
+              spellcheck="false"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="country">Country</label>
+            <input
+              type="text"
+              id="country"
+              placeholder="Your country"
+              spellcheck="false"
+            />
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="password-container">
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••"
+              spellcheck="false"
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              aria-label="Show password"
+            >
+              <i class="far fa-eye-slash"></i>
+            </button>
+          </div>
+        </div>
+        <div class="input-group" style="width: 100%">
+          <label
+            style="
+              display: flex;
+              align-items: center;
+              width: fit-content;
+              margin: 0;
+            "
+          >
+            <input
+              type="checkbox"
+              id="email-notifications"
+              checked
+              style="margin-right: 8px"
+            />
+            <span style="white-space: nowrap"
+              >I want to receive AQI email notifications</span
+            >
+          </label>
+        </div>
+
+        <button type="submit" class="signup-button" id="signup-btn">
+          <span class="register">Register</span>
+          <div class="loading-spinner" id="loadingSpinner"></div>
+        </button>
+
+        <div class="signup-link">
+          Already have an account? <a href="/login">Sign In</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/js/signup.js"></script>
+  </body>
+</html>

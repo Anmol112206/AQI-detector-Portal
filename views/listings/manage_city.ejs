@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Cities</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/manage_city.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="#" class="back-button" onclick="goBack(); return false;">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back</span>
+      </a>
+
+      <h1><i class="fas fa-city"></i> Manage Cities</h1>
+
+      <div class="add-city-form">
+        <input
+          type="text"
+          id="newCity"
+          placeholder="Add a new city for notifications..."
+          spellcheck="false"
+        />
+        <button id="addCityBtn">
+          <span class="add"><i class="fas fa-plus"></i>Add City</span>
+          <div class="loading-spinner" id="loadingSpinner"></div>
+        </button>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">
+          <i class="fas fa-bell"></i> Your Notification Cities
+        </h2>
+
+        <ul class="city-list" id="cityList"></ul>
+
+        <div id="emptyState" class="empty-state" style="display: none">
+          <i
+            class="fas fa-city"
+            style="font-size: 2rem; margin-bottom: 10px"
+          ></i>
+          <p>
+            You haven't added any cities yet. Add a city to receive
+            notifications.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div
+          class="section-title"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <div><i class="fas fa-bell"></i> Recent Notifications</div>
+          <button
+            id="deleteAllBtn"
+            style="
+              background: #e74c3c;
+              color: white;
+              border: none;
+              border-radius: 4px;
+              padding: 8px 10px;
+              cursor: pointer;
+            "
+          >
+            <i class="fas fa-trash"></i> Delete All
+          </button>
+        </div>
+        <div id="noNotifications" class="empty-state" style="display: none">
+          <i
+            class="fas fa-bell-slash"
+            style="font-size: 2rem; margin-bottom: 10px"
+          ></i>
+          <p>No recent notifications for your cities.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">
+          <i class="fas fa-envelope"></i> Email Notification Settings
+        </h2>
+
+        <div
+          class="email-settings"
+          style="
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+          "
+        >
+          <input type="checkbox" id="getEmails" />
+          <label for="getEmails">Receive AQI Email Notifications</label>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-messaging-compat.js"></script>
+
+    <script type="text/javascript" src="/js/manage_city.js"></script>
+  </body>
+</html>
